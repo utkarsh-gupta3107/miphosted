@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+:root {
+  --yellow:#f5bf23;
+  --black:#111;
+  --white:#fff;
+  --light-color:#666;
+  --light-bg:#eee;
+  --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+  --border:.1rem solid rgba(0,0,0,.3);
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: darkred;
+}
+/*.section8,
+footer {
+  scroll-snap-align: start;
+}*/
+
+section{
+  padding: 4rem 4%;
+  width: 100%;
+}
+
+/*coming soon*/
+/* body{
+  background: url(../images/Ellora-caves.jpeg) no-repeat;
+  background: -webkit-gradient(linear, left top, right top, from(var(--white)), to(transparent));
+  background: linear-gradient(90deg, var(--white), transparent);
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+} */
+
+.main h1{
+  color: var(--light-color);
+  font-size: 40px;
+}
+.main p{
+  font-size: 20px;
+}
+.heading {
+  margin-bottom: 3rem;
+  font-size: 5rem;
+  font-weight: 400;
+  color: var(--black);
+  text-transform: capitalize;
+  padding-left: 1rem;
+  border-left: 1rem solid darkred;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem 3rem;
+  background: darkred;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 1.7rem;
+  text-transform: capitalize;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.btn:hover {
+  background: var(--white);
+  color: var(--black);
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    top: 50%;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    top: 50%;
+    opacity: 0;
+  }
+}
+.left{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+ 
+  
+  }
+nav.navbar{
+    position: relative;
+    min-height: 50px;
+    margin-bottom: -22px;
+    margin-left: 5vw;
+    border: 1px solid transparent;
+}
+
+
+.mip-header {
+  position: -webkit-sticky;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  /*bottom: rem;*/
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+  padding: 0.6rem 0.7%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 1000;
+  background: var(--white);
+  text-decoration: none;
+}
+
+.left-header img{
+  vertical-align: middle;
+  width: 40px;
+}
+
+.mip-header .logo {
+  font-size: 2.3rem;
+  color: var(--black);
+  text-transform: capitalize;
+}
+
+.mip-header .logo span,
+.home h3 span{
+  color: darkred;
+}
+
+.mip-header .navbar a {
+  font-size: 1.7rem;
+  color: var(--black);
+  text-transform: capitalize;
+  margin: 0 2rem;
+ 
+}
+
+.mip-header .navbar a:hover {
+  color: darkred;
+}
+.mip-header .icons div {
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  background: var(--light-bg);
+  color: var(--black);
+  cursor: pointer;
+  text-align: center;
+  margin-left: .3rem;
+}
+
+.mip-header .icons div:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+.mip-header #menu-btn {
+  display: none;
+
+  position: relative;
+  /*top: 120%;*/
+  left: 28%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 5rem;
+  background: var(--light-bg);
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+  /*padding: 2rem;*/
+  margin-right: 1rem;
+  text-align: center;
+  -webkit-animation: fadeIn .2s linear;
+          animation: fadeIn .2s linear;
+  display: none;
+}
+
+.mip-header #menu-btn:hover{
+  background: var(--black);
+}
+
+@media (max-width: 1200px) {
+  .mip-header {
+    padding: 1.5rem 2rem;
+  }
+
+*{
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  section {
+    padding: 3rem 2rem;
+  }
+  .mip-header #menu-btn {
+    display: inline-block;
+  }
+  .mip-header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    border-top: var(--border);
+    border-bottom: var(--border);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+  }
+  .mip-header .navbar.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .mip-header .navbar a {
+    display: block;
+    margin: 2rem;
+  }
+}
+/*.header{
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(./images/background.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}*/
+
